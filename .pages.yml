@@ -4,7 +4,7 @@ media:
   rename: true
 
 content:
-  - name: journal
+  - name: Memory
     label: Memory
     type: collection
     path: _journal
