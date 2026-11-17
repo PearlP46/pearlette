@@ -1,0 +1,6 @@
+---
+layout: default
+permalink: /gallery/
+title: Gallery
+---
+<section class="sub-hero"><p class="overline">OUR PERSONAL ART COLLECTION</p><h1>Gallery</h1><p class="subtitle">Every picture holds a little memory.</p><span class="stardust">✧　♡　✧</span></section><div class="gallery-grid">{% assign works = site.gallery | sort: 'date' | reverse %}{% for work in works %}<a class="art-tile" href="{{ work.url | relative_url }}"><div class="art-frame"><img src="{{ work.image | relative_url }}" alt="{{ work.title | escape }}" loading="lazy"></div><div class="tile-info"><span>{{ work.title | escape }}</span><small>{{ work.date | date: "%Y.%m.%d" }}</small></div></a>{% endfor %}</div>

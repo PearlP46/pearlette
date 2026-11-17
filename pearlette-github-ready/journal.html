@@ -1,0 +1,6 @@
+---
+layout: default
+permalink: /journal/
+title: Journal
+---
+<section class="sub-hero"><p class="overline">AN ARCHIVE OF HEARTFELT WORDS</p><h1>Journal</h1><p class="subtitle">Notes, thoughts and tender moments.</p><span class="stardust">✧　♡　✧</span></section><div class="entries">{% assign entries = site.journal | sort: 'date' | reverse %}{% for post in entries %}<a href="{{ post.url | relative_url }}" class="entry"><time>{{ post.date | date: "%Y . %m . %d" }}</time><h3>{{ post.title | escape }}</h3><p>{{ post.excerpt | default: post.content | strip_html | truncate: 130 }}</p><span class="entry-arrow">↗</span></a>{% endfor %}</div>
