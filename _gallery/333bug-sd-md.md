@@ -1,9 +1,9 @@
 ---
-title: "333벌레 · SD&MD"
+title: "333벌레"
 category: "SD&MD"
 artist: "333벌레"
 order: 2
-image: "/media/art-09.webp"
+image: "/media/333bug-sdmd.png"
 image2: ""
 description: ""
 ---

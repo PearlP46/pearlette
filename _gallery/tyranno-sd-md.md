@@ -1,9 +1,9 @@
 ---
-title: "티라노 · SD&MD"
+title: "티라노"
 category: "SD&MD"
 artist: "티라노"
 order: 3
-image: "/media/art-10.webp"
-image2: ""
+image: "/media/tyranno-sdmd-1.png"
+image2: "/media/tyranno-sdmd-2.png"
 description: ""
 ---
