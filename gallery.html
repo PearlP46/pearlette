@@ -3,4 +3,38 @@ layout: default
 permalink: /gallery/
 title: Gallery
 ---
-<section class="sub-hero"><p class="overline">OUR PERSONAL ART COLLECTION</p><h1>Gallery</h1><p class="subtitle">Every picture holds a little memory.</p><span class="stardust">✧　♡　✧</span></section><div class="gallery-grid">{% assign works = site.gallery | sort: 'date' | reverse %}{% for work in works %}<a class="art-tile" href="{{ work.url | relative_url }}"><div class="art-frame"><img src="{{ work.image | relative_url }}" alt="{{ work.title | escape }}" loading="lazy"></div><div class="tile-info"><span>{{ work.title | escape }}</span><small>{{ work.date | date: "%Y.%m.%d" }}</small></div></a>{% endfor %}</div>
+<section class="sub-hero gallery-heading">
+  <p class="overline">A COLLECTION OF LOVELY ARTWORKS</p>
+  <h1>Gallery</h1>
+  <p class="subtitle">Drawn with love, treasured forever.</p>
+  <span class="stardust">✧　♡　✧</span>
+</section>
+<div class="gallery-accordion">
+{% assign group_names = "두상|SD&MD|LD" | split: "|" %}
+{% for group_name in group_names %}
+  {% assign works = site.gallery | where: "category", group_name | sort: "order" %}
+  <details class="gallery-fold">
+    <summary><span class="gallery-fold-title">{{ group_name }}</span><span class="gallery-fold-count">{{ works.size }} works</span><span class="fold-chevron" aria-hidden="true">⌄</span></summary>
+    <div class="gallery-fold-body">
+      <div class="gallery-card-grid">
+        {% for work in works %}
+        <a href="{{ work.url | relative_url }}" class="commission-card">
+          {% if work.image and work.image != "" %}
+          <div class="commission-preview{% if work.image2 and work.image2 != "" %} paired{% endif %}">
+            <img src="{{ work.image | relative_url }}" alt="{{ work.artist | escape }} 작가님의 {{ work.title | escape }}" loading="lazy">
+            {% if work.image2 and work.image2 != "" %}<img src="{{ work.image2 | relative_url }}" alt="{{ work.artist | escape }} 작가님의 페어 일러스트" loading="lazy">{% endif %}
+          </div>
+          {% else %}
+          <div class="commission-preview pending"><span>✧</span><p>이미지 준비 중</p></div>
+          {% endif %}
+          <div class="commission-caption">
+            <span class="commission-title">{{ work.title | escape }}</span>
+            <span class="commission-artist">art by {{ work.artist | escape }} 님</span>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </details>
+{% endfor %}
+</div>

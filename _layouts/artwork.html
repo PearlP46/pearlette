@@ -1,4 +1,11 @@
 ---
 layout: default
 ---
-<section class="sub-hero small"><p class="overline">THE ART COLLECTION · {{ page.date | date: "%Y.%m.%d" }}</p><h1>{{ page.title | escape }}</h1><p class="subtitle">{{ page.description | escape }}</p></section><article class="art-detail"><button class="art-zoom" data-full="{{ page.image | relative_url }}" aria-label="일러스트 크게 보기"><img src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}"></button><div class="article-body">{{ content }}</div></article><div class="return"><a class="outline-button" href="{{ '/gallery/' | relative_url }}">← BACK TO GALLERY</a></div>
+<section class="sub-hero small"><p class="overline">GALLERY · {{ page.category | escape }}</p><h1>{{ page.title | escape }}</h1><p class="subtitle">art by {{ page.artist | escape }} 님</p></section>
+<article class="art-detail">
+{% if page.image and page.image != "" %}<button class="art-zoom" data-full="{{ page.image | relative_url }}" aria-label="일러스트 크게 보기"><img src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}"></button>{% endif %}
+{% if page.image2 and page.image2 != "" %}<button class="art-zoom second-art" data-full="{{ page.image2 | relative_url }}" aria-label="두 번째 일러스트 크게 보기"><img src="{{ page.image2 | relative_url }}" alt="{{ page.title | escape }} 두 번째 그림"></button>{% endif %}
+{% if page.description and page.description != "" %}<p class="art-description">{{ page.description | escape }}</p>{% endif %}
+<div class="article-body">{{ content }}</div>
+</article>
+<div class="return"><a class="outline-button" href="{{ '/gallery/' | relative_url }}">← BACK TO GALLERY</a></div>

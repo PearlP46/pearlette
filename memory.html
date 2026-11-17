@@ -1,0 +1,26 @@
+---
+layout: default
+permalink: /memory/
+title: Memory
+---
+<section class="sub-hero memory-heading">
+  <p class="overline">LITTLE MOMENTS, FOREVER KEPT</p>
+  <h1>Memory</h1>
+  <p class="subtitle">The days we'd love to remember.</p>
+  <span class="stardust">✧　♡　✧</span>
+</section>
+<div class="memory-notes">
+  {% assign entries = site.journal | sort: 'date' | reverse %}
+  {% for post in entries %}
+  <a href="{{ post.url | relative_url }}" class="memory-card">
+    {% if post.cover and post.cover != "" %}<div class="memory-cover"><img src="{{ post.cover | relative_url }}" alt="{{ post.title | escape }} 이미지" loading="lazy"></div>{% endif %}
+    <div class="memory-card-body">
+      <time>{{ post.date | date: "%Y . %m . %d" }}</time>
+      <h2>{{ post.title | escape }}</h2>
+      <p>{{ post.excerpt | default: post.content | strip_html | truncate: 150 }}</p>
+      <span class="memory-more">READ MEMORY ↗</span>
+    </div>
+  </a>
+  {% endfor %}
+  {% if entries.size == 0 %}<p class="empty-memory">아직 기록이 없어요. 첫 번째 추억을 남겨 주세요 ♡</p>{% endif %}
+</div>

@@ -4,8 +4,8 @@ media:
   rename: true
 
 content:
-  - name: Memory
-    label: Memory
+  - name: memory
+    label: Memory · 추억 기록
     type: collection
     path: _journal
     format: yaml-frontmatter
@@ -17,56 +17,72 @@ content:
       order: desc
     fields:
       - name: title
-        label: 제목
+        label: 글 제목
         type: string
         required: true
       - name: date
-        label: 날짜
+        label: 기록 날짜
         type: date
       - name: category
-        label: 카테고리
+        label: 분류
         type: string
       - name: excerpt
         label: 짧은 소개
         type: text
+      - name: cover
+        label: 대표 사진
+        type: image
       - name: body
-        label: 본문
+        label: 사진과 글
         type: rich-text
 
   - name: gallery
-    label: 그림 · Gallery
+    label: Gallery · 일러스트
     type: collection
     path: _gallery
     format: yaml-frontmatter
     filename: "{primary}.md"
     view:
-      fields: [title, date, category]
+      fields: [title, category, artist, order]
       primary: title
-      sort: date
-      order: desc
+      sort: order
+      order: asc
     fields:
       - name: title
         label: 작품 제목
         type: string
         required: true
-      - name: date
-        label: 날짜
-        type: date
       - name: category
-        label: 분류
+        label: 카테고리
+        type: select
+        options:
+          - name: 두상
+            value: 두상
+          - name: SD&MD
+            value: SD&MD
+          - name: LD
+            value: LD
+      - name: order
+        label: 정렬 순서
+        type: number
+      - name: artist
+        label: 작가 이름 (님 제외)
         type: string
       - name: image
-        label: 대표 일러스트
+        label: 작품 이미지
+        type: image
+      - name: image2
+        label: 페어 두 번째 이미지 (선택)
         type: image
       - name: description
-        label: 작품 소개
+        label: 작품 설명
         type: text
       - name: body
-        label: 작품에 대한 이야기
+        label: 작품 이야기
         type: rich-text
 
   - name: site
-    label: 사이트 소개 · About
+    label: 메인 이미지 · Site
     type: file
     path: _data/site.yml
     format: yaml
@@ -74,20 +90,20 @@ content:
       delete: false
     fields:
       - name: description
-        label: 사이트 설명
-        type: text
-      - name: rosette_description
-        label: 로제트 소개
-        type: text
-      - name: pearl_description
-        label: 펄 소개
+        label: 사이트 소개
         type: text
       - name: hero_image
-        label: 메인 이미지
+        label: 메인 대표 이미지
         type: image
+      - name: rosette_description
+        label: 로제트 소개 (추후 사용)
+        type: text
+      - name: pearl_description
+        label: 펄 소개 (추후 사용)
+        type: text
       - name: rosette_image
-        label: 로제트 이미지
+        label: 로제트 이미지 (추후 사용)
         type: image
       - name: pearl_image
-        label: 펄 이미지
+        label: 펄 이미지 (추후 사용)
         type: image

@@ -1,4 +1,4 @@
 ---
 layout: default
 ---
-<article class="journal-post"><div class="sub-hero small"><p class="overline">JOURNAL · {{ page.date | date: "%Y.%m.%d" }}</p><h1>{{ page.title | escape }}</h1>{% if page.excerpt %}<p class="subtitle">{{ page.excerpt | escape }}</p>{% endif %}</div>{% if page.cover %}<img class="post-cover" src="{{ page.cover | relative_url }}" alt="{{ page.title | escape }} 대표 이미지">{% endif %}<div class="article-body">{{ content }}</div><div class="return"><a class="outline-button" href="{{ '/journal/' | relative_url }}">← BACK TO JOURNAL</a></div></article>
+<article class="journal-post"><div class="sub-hero small"><p class="overline">MEMORY · {{ page.date | date: "%Y.%m.%d" }}</p><h1>{{ page.title | escape }}</h1>{% if page.excerpt %}<p class="subtitle">{{ page.excerpt | escape }}</p>{% endif %}</div>{% if page.cover and page.cover != "" %}<img class="post-cover" src="{{ page.cover | relative_url }}" alt="{{ page.title | escape }} 대표 이미지">{% endif %}<div class="article-body">{{ content }}</div><div class="return"><a class="outline-button" href="{{ '/memory/' | relative_url }}">← BACK TO MEMORY</a></div></article>

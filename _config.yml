@@ -13,7 +13,7 @@ collections:
     permalink: /gallery/:name/
   journal:
     output: true
-    permalink: /journal/:name/
+    permalink: /memory/:name/
 defaults:
   - scope:
       path: ""
@@ -30,3 +30,4 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - LICENSE
+  - pearlette-github-ready
