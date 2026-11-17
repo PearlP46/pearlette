@@ -5,7 +5,7 @@ media:
 
 content:
   - name: journal
-    label: 일기 · Journal
+    label: Memory
     type: collection
     path: _journal
     format: yaml-frontmatter
