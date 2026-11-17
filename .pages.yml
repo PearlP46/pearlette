@@ -1,0 +1,93 @@
+media:
+  input: media
+  output: /media
+  rename: true
+
+content:
+  - name: journal
+    label: 일기 · Journal
+    type: collection
+    path: _journal
+    format: yaml-frontmatter
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      fields: [title, date, category]
+      primary: title
+      sort: date
+      order: desc
+    fields:
+      - name: title
+        label: 제목
+        type: string
+        required: true
+      - name: date
+        label: 날짜
+        type: date
+      - name: category
+        label: 카테고리
+        type: string
+      - name: excerpt
+        label: 짧은 소개
+        type: text
+      - name: body
+        label: 본문
+        type: rich-text
+
+  - name: gallery
+    label: 그림 · Gallery
+    type: collection
+    path: _gallery
+    format: yaml-frontmatter
+    filename: "{primary}.md"
+    view:
+      fields: [title, date, category]
+      primary: title
+      sort: date
+      order: desc
+    fields:
+      - name: title
+        label: 작품 제목
+        type: string
+        required: true
+      - name: date
+        label: 날짜
+        type: date
+      - name: category
+        label: 분류
+        type: string
+      - name: image
+        label: 대표 일러스트
+        type: image
+      - name: description
+        label: 작품 소개
+        type: text
+      - name: body
+        label: 작품에 대한 이야기
+        type: rich-text
+
+  - name: site
+    label: 사이트 소개 · About
+    type: file
+    path: _data/site.yml
+    format: yaml
+    operations:
+      delete: false
+    fields:
+      - name: description
+        label: 사이트 설명
+        type: text
+      - name: rosette_description
+        label: 로제트 소개
+        type: text
+      - name: pearl_description
+        label: 펄 소개
+        type: text
+      - name: hero_image
+        label: 메인 이미지
+        type: image
+      - name: rosette_image
+        label: 로제트 이미지
+        type: image
+      - name: pearl_image
+        label: 펄 이미지
+        type: image
