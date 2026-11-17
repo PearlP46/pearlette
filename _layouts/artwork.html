@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<section class="sub-hero small"><p class="overline">GALLERY · {{ page.category | escape }}</p><h1>{{ page.title | escape }}</h1><p class="subtitle">art by {{ page.artist | escape }} 님</p></section>
+<section class="sub-hero small"><p class="overline">GALLERY · {{ page.category | escape }}</p><h1>art by {{ page.artist | escape }} 님</h1></section>
 <article class="art-detail">
 {% if page.image and page.image != "" %}<button class="art-zoom" data-full="{{ page.image | relative_url }}" aria-label="일러스트 크게 보기"><img src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}"></button>{% endif %}
 {% if page.image2 and page.image2 != "" %}<button class="art-zoom second-art" data-full="{{ page.image2 | relative_url }}" aria-label="두 번째 일러스트 크게 보기"><img src="{{ page.image2 | relative_url }}" alt="{{ page.title | escape }} 두 번째 그림"></button>{% endif %}

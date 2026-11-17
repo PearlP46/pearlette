@@ -21,14 +21,13 @@ title: Gallery
         <a href="{{ work.url | relative_url }}" class="commission-card">
           {% if work.image and work.image != "" %}
           <div class="commission-preview{% if work.image2 and work.image2 != "" %} paired{% endif %}">
-            <img src="{{ work.image | relative_url }}" alt="{{ work.artist | escape }} 작가님의 {{ work.title | escape }}" loading="lazy">
+            <img src="{{ work.image | relative_url }}" alt="{{ work.artist | escape }} 작가님의 일러스트" loading="lazy">
             {% if work.image2 and work.image2 != "" %}<img src="{{ work.image2 | relative_url }}" alt="{{ work.artist | escape }} 작가님의 페어 일러스트" loading="lazy">{% endif %}
           </div>
           {% else %}
           <div class="commission-preview pending"><span>✧</span><p>이미지 준비 중</p></div>
           {% endif %}
           <div class="commission-caption">
-            <span class="commission-title">{{ work.title | escape }}</span>
             <span class="commission-artist">art by {{ work.artist | escape }} 님</span>
           </div>
         </a>
