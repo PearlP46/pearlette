@@ -1,5 +1,5 @@
 ---
-title: "333벌레의 SD·MD 일러스트"
+title: "333벌레 · SD&MD"
 category: "SD&MD"
 artist: "333벌레"
 order: 2

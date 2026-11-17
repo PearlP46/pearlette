@@ -1,5 +1,5 @@
 ---
-title: "동태의 두상 일러스트"
+title: "동태 · 두상"
 category: "두상"
 artist: "동태"
 order: 1

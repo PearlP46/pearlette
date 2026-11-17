@@ -1,5 +1,5 @@
 ---
-title: "듀의 SD·MD 일러스트"
+title: "듀 · SD&MD"
 category: "SD&MD"
 artist: "듀"
 order: 4

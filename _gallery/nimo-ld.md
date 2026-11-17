@@ -1,9 +1,9 @@
 ---
-title: "니모의 LD 일러스트"
+title: "니모 · LD"
 category: "LD"
 artist: "니모"
 order: 3
-image: "/media/art-02.webp"
+image: ""
 image2: ""
 description: ""
 ---

@@ -1,9 +1,9 @@
 ---
-title: "런치의 LD 일러스트"
+title: "런치 · LD"
 category: "LD"
 artist: "런치"
 order: 2
-image: "/media/art-03.webp"
+image: ""
 image2: ""
 description: ""
 ---

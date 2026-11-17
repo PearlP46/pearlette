@@ -1,5 +1,5 @@
 ---
-title: "런치의 두상 일러스트"
+title: "런치 · 두상"
 category: "두상"
 artist: "런치"
 order: 2

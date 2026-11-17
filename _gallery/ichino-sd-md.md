@@ -1,5 +1,5 @@
 ---
-title: "이치노의 SD·MD 일러스트"
+title: "이치노 · SD&MD"
 category: "SD&MD"
 artist: "이치노"
 order: 1

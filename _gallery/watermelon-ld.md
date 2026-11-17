@@ -1,5 +1,5 @@
 ---
-title: "수박의 LD 일러스트"
+title: "수박 · LD"
 category: "LD"
 artist: "수박"
 order: 1
