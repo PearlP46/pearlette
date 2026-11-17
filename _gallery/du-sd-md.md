@@ -1,9 +1,9 @@
 ---
-title: "듀 · SD&MD"
+title: "듀"
 category: "SD&MD"
 artist: "듀"
 order: 4
-image: ""
+image: "/media/du-sdmd.jpg"
 image2: ""
 description: ""
 ---

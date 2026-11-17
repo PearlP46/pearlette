@@ -1,9 +1,9 @@
 ---
-title: "mtnya0_0 · LD"
+title: "mtnya0_0"
 category: "LD"
 artist: "mtnya0_0"
-order: 4
-image: "/media/art-02.webp"
-image2: "/media/art-04.webp"
+order: 2
+image: "/media/mtnya-ld.png"
+image2: ""
 description: ""
 ---
