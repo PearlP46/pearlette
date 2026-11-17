@@ -1,0 +1,6 @@
+---
+layout: default
+permalink: /archive/
+title: Archive
+---
+<section class="sub-hero"><p class="overline">A COLLECTION OF OUR MEMORIES</p><h1>Archive</h1><p class="subtitle">A little time capsule of all our moments.</p><span class="stardust">✧　♡　✧</span></section><div class="archive-columns"><section><h2>Journal <span>♡</span></h2>{% assign entries = site.journal | sort: 'date' | reverse %}{% for post in entries %}<a href="{{ post.url | relative_url }}" class="archive-link"><time>{{ post.date | date: "%Y.%m.%d" }}</time><span>{{ post.title | escape }}</span></a>{% endfor %}</section><section><h2>Artwork <span>✧</span></h2>{% assign works = site.gallery | sort: 'date' | reverse %}{% for work in works %}<a href="{{ work.url | relative_url }}" class="archive-link"><time>{{ work.date | date: "%Y.%m.%d" }}</time><span>{{ work.title | escape }}</span></a>{% endfor %}</section></div>

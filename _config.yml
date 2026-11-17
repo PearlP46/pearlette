@@ -1,0 +1,32 @@
+title: pearlette
+subtitle: an archive of affection & memories
+description: A romantic art gallery and personal archive for Rosette & Pearl.
+url: "https://pap891974-dot.github.io"
+baseurl: "/pearlette"
+lang: ko
+timezone: Asia/Seoul
+markdown: kramdown
+permalink: pretty
+collections:
+  gallery:
+    output: true
+    permalink: /gallery/:name/
+  journal:
+    output: true
+    permalink: /journal/:name/
+defaults:
+  - scope:
+      path: ""
+      type: gallery
+    values:
+      layout: artwork
+  - scope:
+      path: ""
+      type: journal
+    values:
+      layout: entry
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
