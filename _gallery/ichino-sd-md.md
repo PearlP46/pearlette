@@ -1,5 +1,5 @@
 ---
-title: 이치노 · SD&MD
+title: 이치노 · 두상
 order: 1
 artist: 이치노
 image: /media/art-07.webp
