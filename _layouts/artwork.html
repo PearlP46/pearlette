@@ -1,0 +1,4 @@
+---
+layout: default
+---
+<section class="sub-hero small"><p class="overline">THE ART COLLECTION · {{ page.date | date: "%Y.%m.%d" }}</p><h1>{{ page.title | escape }}</h1><p class="subtitle">{{ page.description | escape }}</p></section><article class="art-detail"><button class="art-zoom" data-full="{{ page.image | relative_url }}" aria-label="일러스트 크게 보기"><img src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}"></button><div class="article-body">{{ content }}</div></article><div class="return"><a class="outline-button" href="{{ '/gallery/' | relative_url }}">← BACK TO GALLERY</a></div>

@@ -1,0 +1,3 @@
+document.addEventListener('click',e=>{const btn=e.target.closest('[data-full]');const dialog=document.querySelector('#lightbox');if(btn&&dialog){const img=dialog.querySelector('img');img.src=btn.dataset.full;img.alt=btn.querySelector('img')?.alt||'일러스트';dialog.showModal();}if(e.target.id==='closeLightbox'&&dialog)dialog.close();if(e.target===dialog)dialog.close();});
+// Pages CMS embeds /media images; project Pages uses /pearlette/media.
+document.querySelectorAll(".article-body img").forEach(img=>{const src=img.getAttribute("src");if(src && src.startsWith("/media/")) img.setAttribute("src", (window.PEARLETTE_BASEURL||"")+src);});
