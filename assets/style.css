@@ -69,3 +69,7 @@
 .memory-card{grid-template-columns:1fr}
 .memory-cover{height:200px}
 }
+/* Gallery credits only: suppress legacy artwork titles */
+.commission-caption .commission-title{display:none!important}
+.commission-caption{min-height:46px;justify-content:center}
+.commission-caption .commission-artist{font-size:13px;color:#947b90;font-weight:400}
